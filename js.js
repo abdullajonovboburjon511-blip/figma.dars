@@ -1,12 +1,14 @@
 // ==========================================
-// 1. GLOBAL O'ZGARUVCHILAR
+// CLICON ECOMMERCE - GLOBAL JAVASCRIPT
 // ==========================================
+
+// GLOBAL O'ZGARUVCHILAR
 var wishlistCount = 0;
 var cartCount = 0;
 var currentSlide = 0;
 
 // ==========================================
-// 2. SAVATCHA FUNKSIYASI (Global doirada)
+// 1. SAVATCHA FUNKSIYASI
 // ==========================================
 function addToCart() {
   cartCount++;
@@ -17,10 +19,12 @@ function addToCart() {
 
   if (cartBadge1) cartBadge1.textContent = cartCount;
   if (cartBadge2) cartBadge2.textContent = cartCount;
+  
+  console.log('Savatga qo\'shildi! Jami:', cartCount);
 }
 
 // ==========================================
-// 3. LIKE (YURAKCHA) FUNKSIYASI (Global doirada)
+// 2. LIKE (YURAKCHA) FUNKSIYASI
 // ==========================================
 function toggleLike(btn) {
   if (!btn) return;
@@ -31,6 +35,7 @@ function toggleLike(btn) {
     if (icon) {
       icon.classList.remove('fa-regular');
       icon.classList.add('fa-solid');
+      icon.style.color = '#ee5858';
     }
     wishlistCount++;
   } else {
@@ -38,6 +43,7 @@ function toggleLike(btn) {
     if (icon) {
       icon.classList.remove('fa-solid');
       icon.classList.add('fa-regular');
+      icon.style.color = 'inherit';
     }
     if (wishlistCount > 0) wishlistCount--;
   }
@@ -46,10 +52,12 @@ function toggleLike(btn) {
   if (wishlistBadge) {
     wishlistBadge.textContent = wishlistCount;
   }
+  
+  console.log('Sevimlilarga qo\'shildi! Jami:', wishlistCount);
 }
 
 // ==========================================
-// 4. SAHIFA YUKLANGANDA ISHLAYDIGAN EVENTLAR
+// 3. SAHIFA YUKLANGANDA ISHLAYDIGAN EVENTLAR
 // ==========================================
 document.addEventListener('DOMContentLoaded', function() {
   
@@ -77,15 +85,28 @@ document.addEventListener('DOMContentLoaded', function() {
   var closeModal = document.getElementById('closeModal');
 
   if (userBtn && loginModal) {
-    userBtn.addEventListener('click', function() { loginModal.classList.add('show'); });
+    userBtn.addEventListener('click', function() { 
+      loginModal.classList.add('show'); 
+    });
   }
   if (closeModal && loginModal) {
-    closeModal.addEventListener('click', function() { loginModal.classList.remove('show'); });
+    closeModal.addEventListener('click', function() { 
+      loginModal.classList.remove('show'); 
+    });
+  }
+  
+  // Modal tashqarida bosilsa yopilsin
+  if (loginModal) {
+    loginModal.addEventListener('click', function(e) {
+      if (e.target === loginModal) {
+        loginModal.classList.remove('show');
+      }
+    });
   }
 });
 
 // ==========================================
-// 5. SLIDER MA'LUMOTLARI VA BOSHQARUV
+// 4. SLIDER MA'LUMOTLARI VA BOSHQARUV
 // ==========================================
 var slidesData = [
   {
@@ -93,21 +114,21 @@ var slidesData = [
     title: "Xbox Consoles",
     desc: "Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.",
     price: "$299",
-    img: "images/xbox.png"
+    img: "https://images.unsplash.com/photo-1486572788984-e01ceda94d30?w=500"
   },
   {
     sub: "- NEXT GEN POWER",
     title: "PlayStation 5 Console",
     desc: "Experience lightning-fast loading with an ultra-high speed SSD.",
     price: "$499",
-    img: "images/ps5.png"
+    img: "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?w=500"
   },
   {
     sub: "- WIRELESS AUDIO",
     title: "AirPods Max Headphones",
     desc: "High-fidelity audio with Active Noise Cancellation for immersive sound.",
     price: "$549",
-    img: "images/headphones.png"
+    img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
   }
 ];
 
@@ -149,8 +170,17 @@ if (prevSlideBtn) {
   });
 }
 
+// Dot bosilsa slider o'tsin
+var dots = document.querySelectorAll('.dot');
+dots.forEach(function(dot) {
+  dot.addEventListener('click', function() {
+    currentSlide = parseInt(this.getAttribute('data-index'));
+    updateSlide(currentSlide);
+  });
+});
+
 // ==========================================
-// 6. TAYMER SCRIPT
+// 5. TAYMER SCRIPT ("Deals ends in")
 // ==========================================
 var targetDate = new Date();
 targetDate.setDate(targetDate.getDate() + 16);
@@ -174,8 +204,42 @@ function updateTimer() {
     if (hEl) hEl.textContent = hours < 10 ? '0' + hours : hours;
     if (mEl) mEl.textContent = minutes < 10 ? '0' + minutes : minutes;
     if (sEl) sEl.textContent = seconds < 10 ? '0' + seconds : seconds;
+  } else {
+    // Taymer tugadi
+    var timerBox = document.querySelector('.timer-box');
+    if (timerBox) timerBox.textContent = 'CHEGIRMA TUGADI!';
   }
 }
 
 setInterval(updateTimer, 1000);
 updateTimer();
+
+// ==========================================
+// 6. QIDIRUV FUNKSIYASI
+// ==========================================
+var searchButtons = document.querySelectorAll('.search-box button, .search-inside button');
+searchButtons.forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    var input = this.parentElement.querySelector('input');
+    if (input && input.value.trim()) {
+      console.log('Qidiruv:', input.value);
+      // Haqiqiy veb saytida serverga sorguv yuboriladi
+    }
+  });
+});
+
+// Enter bosilsa ham qidiruv
+var searchInputs = document.querySelectorAll('.search-box input, .search-inside input');
+searchInputs.forEach(function(input) {
+  input.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (this.value.trim()) {
+        console.log('Qidiruv:', this.value);
+      }
+    }
+  });
+});
+
+console.log('Clicon E-commerce - Barcha skriptlar yuklandi! ✅');
