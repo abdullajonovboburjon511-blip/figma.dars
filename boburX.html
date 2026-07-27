@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahsulot Tafsilotlari - Clicon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="boburX.css">
+</head>
+<body>
+
+  <div class="container product-detail-wrapper">
+    
+    <div class="breadcrumb">
+      <a href="shop.html">Home</a> <i class="fa-solid fa-chevron-right"></i>
+      <a href="shop.html">Shop Grid</a> <i class="fa-solid fa-chevron-right"></i>
+      <a href="#">Electronics Devices</a> <i class="fa-solid fa-chevron-right"></i>
+      <span class="current">Macbook Pro</span>
+    </div>
+
+    <div class="product-main-section">
+      
+      <div class="product-gallery">
+        <div class="main-img-box">
+          <img id="mainProductImg" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600" alt="Macbook Pro">
+        </div>
+        <div class="thumbnail-list">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=200" alt="Thumb 1" class="thumb active" onclick="changeImage(this)">
+          <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=200" alt="Thumb 2" class="thumb" onclick="changeImage(this)">
+          <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=200" alt="Thumb 3" class="thumb" onclick="changeImage(this)">
+          <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=200" alt="Thumb 4" class="thumb" onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <div class="product-details-info">
+        
+        <div class="rating-review-row">
+          <div class="stars">★★★★★</div>
+          <span class="review-count">4.7 Star Rating</span>
+          <span class="divider">|</span>
+          <span class="reviews-num">21,101 User Reviews</span>
+        </div>
+
+        <h1 class="product-main-title">2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Grey</h1>
+
+        <div class="meta-row">
+          <span>Sku: <strong>A248613</strong></span>
+          <span class="divider">|</span>
+          <span class="in-stock-badge">IN STOCK</span>
+        </div>
+
+        <div class="price-row">
+          <span class="current-price">$1,699</span>
+          <span class="original-price">$1,999.00</span>
+          <span class="discount-badge">21% OFF</span>
+        </div>
+
+        <div class="config-section">
+          <span class="config-label">Color:</span>
+          <div class="color-options">
+            <span class="color-dot silver active" onclick="selectColor(this)"></span>
+            <span class="color-dot dark" onclick="selectColor(this)"></span>
+          </div>
+        </div>
+
+        <div class="config-section">
+          <span class="config-label">Memory:</span>
+          <div class="memory-options">
+            <button class="mem-btn active" onclick="selectMemory(this)">8GB unified memory</button>
+            <button class="mem-btn" onclick="selectMemory(this)">16GB unified memory</button>
+          </div>
+        </div>
+
+        <div class="config-section">
+          <span class="config-label">Storage:</span>
+          <div class="storage-options">
+            <button class="stor-btn active" onclick="selectStorage(this)">512GB SSD Storage</button>
+            <button class="stor-btn" onclick="selectStorage(this)">1TB SSD Storage</button>
+          </div>
+        </div>
+
+        <div class="purchase-actions-row">
+          <div class="quantity-counter">
+            <button onclick="decreaseQty()">-</button>
+            <input type="text" id="qtyInput" value="1" readonly>
+            <button onclick="increaseQty()">+</button>
+          </div>
+          <button class="add-to-cart-big-btn" onclick="addToCartAction()"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+          <button class="buy-now-btn">BUY NOW</button>
+        </div>
+
+        <div class="extra-actions">
+          <button class="extra-btn" onclick="toggleLikeBtn(this)"><i class="fa-regular fa-heart"></i> Add to wishlist</button>
+          <button class="extra-btn"><i class="fa-solid fa-code-compare"></i> Add to compare</button>
+        </div>
+
+        <div class="secure-checkout-box">
+          <p>100% Guarantee Safe Checkout</p>
+          <div class="payment-icons">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+            <i class="fa-brands fa-apple-pay"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="product-tabs-section">
+      <div class="tabs-header">
+        <button class="tab-btn active" onclick="switchTab(event, 'description')">Description</button>
+        <button class="tab-btn" onclick="switchTab(event, 'additional')">Additional Information</button>
+        <button class="tab-btn" onclick="switchTab(event, 'specification')">Specification</button>
+        <button class="tab-btn" onclick="switchTab(event, 'review')">Review</button>
+      </div>
+
+      <div class="tab-content active" id="description">
+        <h3>Description</h3>
+        <p>The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life. Add to that a stunning Liquid Retina XDR display, the best camera and audio ever in a Mac notebook, and all the ports you need, the first notebook of its kind, this MacBook Pro is a beast. Pro. Up to 11x faster machine learning, up to 13-core graphics, and double the unified memory.</p>
+      </div>
+
+      <div class="tab-content" id="additional">
+        <h3>Additional Information</h3>
+        <p>Weight: 1.4 kg | Dimensions: 30.41 x 21.24 x 1.56 cm | Warranty: 1 Year Official Apple Warranty.</p>
+      </div>
+
+      <div class="tab-content" id="specification">
+        <h3>Specification</h3>
+        <p>Processor: Apple M1 chip with 8-core CPU | Display: 13.3-inch Retina display | RAM: 8GB / 16GB | Storage: 256GB / 512GB SSD.</p>
+      </div>
+
+      <div class="tab-content" id="review">
+        <h3>Customer Reviews</h3>
+        <p>★★★★★ "Amazing laptop, extremely fast and reliable battery life!" — Bobur X.</p>
+      </div>
+    </div>
+<footer class="site-footer">
+  <div class="container footer-container">
+    
+    <div class="footer-col brand-col">
+      <div class="footer-logo">
+        <i class="fa-solid fa-circle" style="color: #fa8232;"></i> <strong>CLICON</strong>
+      </div>
+      <div class="support-info">
+        <span class="support-label">Customer Supports:</span>
+        <a href="tel:6295550129" class="support-phone">(629) 555-0129</a>
+      </div>
+      <p class="footer-address">4517 Washington Ave. Manchester, Kentucky 39495</p>
+      <a href="mailto:info@kinbo.com" class="footer-email">info@kinbo.com</a>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-title">TOP CATEGORY</h4>
+      <ul class="footer-links">
+        <li><a href="boburX.html">Computer & Laptop</a></li>
+        <li><a href="boburX.html">SmartPhone</a></li>
+        <li><a href="boburX.html">Headphone</a></li>
+        <li><a href="boburX.html" class="active-cat">Accessories</a></li>
+        <li><a href="boburX.html">Camera & Photo</a></li>
+        <li><a href="boburX.html">TV & Homes</a></li>
+      </ul>
+      <a href="boburX.html" class="browse-all-btn">
+        Browse All Product <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-title">QUICK LINKS</h4>
+      <ul class="footer-links">
+        <li><a href="boburX.html">Shop Product</a></li>
+        <li><a href="boburX.html">Shoping Cart</a></li>
+        <li><a href="boburX.html">Wishlist</a></li>
+        <li><a href="boburX.html">Compare</a></li>
+        <li><a href="boburX.html">Track Order</a></li>
+        <li><a href="boburX.html">Customer Help</a></li>
+        <li><a href="boburX.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-title">DOWNLOAD APP</h4>
+      <div class="app-store-buttons">
+        <a href="boburX.html" class="app-btn">
+          <i class="fa-brands fa-google-play"></i>
+          <div><span>Get it now</span><strong>Google Play</strong></div>
+        </a>
+        <a href="boburX.html" class="app-btn">
+          <i class="fa-brands fa-app-store"></i>
+          <div><span>Get it now</span><strong>App Store</strong></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-title">POPULAR TAG</h4>
+      <div class="tag-cloud">
+        <a href="/royhat.html">royhatan ostsh</a>
+        <a href="boburX.html">iPhone</a>
+        <a href="boburX.html">TV</a>
+        <a href="boburX.html">Asus Laptops</a>
+        <a href="boburX.html">Macbook</a>
+        <a href="boburX.html">SSD</a>
+        <a href="boburX.html" class="tag-highlight">Graphics Card</a>
+        <a href="boburX.html">Power Bank</a>
+        <a href="boburX.html">Smart TV</a>
+        <a href="boburX.html">Speaker</a>
+        <a href="boburX.html">Tablet</a>
+        <a href="boburX.html">Microwave</a>
+        <a href="boburX.html">Samsung</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom-bar">
+    <div class="container">
+      <p>Kinbo-eCommerce Template © 2021. Design by Templatecookie</p>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="boburX.js"></script>
+</body>
+</html>

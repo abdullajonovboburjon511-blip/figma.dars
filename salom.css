@@ -1,0 +1,162 @@
+/* UMUMIY SOZLAMALAR */
+body {
+  font-family: 'Public Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #191c1f;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* TOP & MAIN HEADER */
+.top-header { background-color: #1b6392; color: #ffffff; font-size: 13px; padding: 10px 0; }
+.top-header-row { display: flex; justify-content: space-between; align-items: center; }
+.top-header-right { display: flex; align-items: center; gap: 15px; }
+.top-header-right a { color: #ffffff; text-decoration: none; }
+.top-header-right .divider { color: rgba(255, 255, 255, 0.3); }
+.lang-select { background: transparent; border: none; color: #ffffff; font-size: 13px; outline: none; cursor: pointer; }
+
+.main-header { background-color: #1b6392; padding: 20px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.main-header-row { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 28px; color: #ffffff; display: flex; align-items: center; gap: 10px; }
+.search-bar-box { display: flex; background: #ffffff; border-radius: 4px; width: 550px; overflow: hidden; }
+.search-bar-box input { flex: 1; padding: 12px 16px; border: none; outline: none; font-size: 14px; }
+.search-bar-box button { background: #fa8232; border: none; padding: 0 20px; color: #ffffff; cursor: pointer; font-size: 16px; }
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.header-actions a { color: #ffffff; font-size: 22px; text-decoration: none; position: relative; }
+.badge-count {
+  position: absolute; top: -8px; right: -10px; background: #ffffff; color: #1b6392;
+  font-size: 11px; font-weight: 700; width: 18px; height: 18px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.nav-bar { background-color: #ffffff; border-bottom: 1px solid #e4e7e9; padding: 15px 0; }
+.nav-row { display: flex; justify-content: space-between; align-items: center; }
+.all-categories-btn { background: #f2f4f5; padding: 12px 20px; border-radius: 4px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: #5f6c72; text-decoration: none; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+.nav-links a:hover { color: #fa8232; }
+.nav-phone { font-size: 16px; font-weight: 700; color: #191c1f; display: flex; align-items: center; gap: 8px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #77878f; }
+.breadcrumb a { color: #77878f; text-decoration: none; }
+.breadcrumb .current { color: #2da5f3; }
+
+/* WISHLIST JADVAL STILI */
+.wishlist-container {
+  margin: 30px auto 60px auto;
+}
+.wishlist-card {
+  background: #ffffff;
+  border: 1px solid #e4e7e9;
+  border-radius: 4px;
+  padding: 30px;
+}
+.wishlist-header-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191c1f;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.wishlist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.wishlist-table th {
+  background: #f2f4f5;
+  color: #475156;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  text-align: left;
+}
+.wishlist-table td {
+  padding: 20px 16px;
+  border-bottom: 1px solid #e4e7e9;
+  vertical-align: middle;
+}
+.product-col {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.remove-btn {
+  background: none;
+  border: none;
+  color: #adb7bc;
+  font-size: 16px;
+  cursor: pointer;
+}
+.remove-btn:hover { color: #ee5858; }
+.product-col img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border: 1px solid #e4e7e9;
+  border-radius: 4px;
+}
+.product-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #191c1f;
+}
+.price-col {
+  font-size: 15px;
+  font-weight: 600;
+  color: #191c1f;
+}
+.stock-col span {
+  font-size: 12px;
+  font-weight: 700;
+}
+.in-stock { color: #2db67c; }
+.out-stock { color: #ee5858; }
+
+.add-to-cart-btn {
+  background: #fa8232;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+.add-to-cart-btn:hover { background: #e06d20; }
+.add-to-cart-btn.disabled {
+  background: #adb7bc;
+  pointer-events: none;
+}
+
+/* FOOTER */
+.site-footer { background-color: #191c1f; color: #ffffff; padding-top: 60px; font-size: 13px; }
+.footer-container { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr; gap: 30px; padding-bottom: 50px; border-bottom: 1px solid #30363a; }
+.footer-logo { font-size: 24px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; color: #fff; }
+.support-info { margin-bottom: 12px; }
+.support-label { display: block; font-size: 11px; color: #77878f; margin-bottom: 2px; }
+.support-phone { font-size: 16px; font-weight: 700; color: #ffffff; text-decoration: none; }
+.footer-address { color: #77878f; line-height: 1.5; margin-bottom: 10px; }
+.footer-email { color: #e4e7e9; text-decoration: none; font-weight: 500; }
+.footer-title { font-size: 14px; font-weight: 700; color: #ffffff; margin-top: 0; margin-bottom: 20px; }
+.footer-links { list-style: none; padding: 0; margin: 0 0 20px 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #89949a; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover, .footer-links a.active-cat { color: #ffa500; }
+.browse-all-btn { display: inline-flex; align-items: center; gap: 8px; background: #ffc107; color: #191c1f; padding: 10px 16px; border-radius: 4px; font-weight: 700; font-size: 12px; text-decoration: none; }
+.app-store-buttons { display: flex; flex-direction: column; gap: 10px; }
+.app-btn { display: flex; align-items: center; gap: 10px; background: #22262a; border: 1px solid #30363a; padding: 10px 14px; border-radius: 4px; color: #fff; text-decoration: none; }
+.app-btn i { font-size: 22px; }
+.app-btn span { display: block; font-size: 9px; color: #77878f; }
+.app-btn strong { font-size: 12px; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-cloud a { background: #22262a; color: #c4cdd2; padding: 6px 10px; border-radius: 2px; font-size: 11px; text-decoration: none; }
+.tag-cloud a.tag-highlight { border: 1px solid #ffc107; color: #ffc107; }
+.footer-bottom-bar { background-color: #111315; padding: 20px 0; text-align: center; color: #77878f; font-size: 12px; margin-top: 40px; }

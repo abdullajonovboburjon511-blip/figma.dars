@@ -1,0 +1,303 @@
+/* ==========================================
+   UMUMIY SOZLAMALAR
+   ========================================== */
+body {
+  font-family: 'Public Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #191c1f;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================
+   TOP HEADER & MAIN HEADER & NAV
+   ========================================== */
+.top-header {
+  background-color: #1b6392;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 10px 0;
+}
+.top-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.top-header-right a { color: #ffffff; text-decoration: none; }
+.top-header-right .divider { color: rgba(255, 255, 255, 0.3); }
+.lang-select { background: transparent; border: none; color: #ffffff; font-size: 13px; outline: none; cursor: pointer; }
+
+.main-header {
+  background-color: #1b6392;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.main-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-size: 28px; color: #ffffff; display: flex; align-items: center; gap: 10px; }
+.search-bar-box { display: flex; background: #ffffff; border-radius: 4px; width: 550px; overflow: hidden; }
+.search-bar-box input { flex: 1; padding: 12px 16px; border: none; outline: none; font-size: 14px; }
+.search-bar-box button { background: #fa8232; border: none; padding: 0 20px; color: #ffffff; cursor: pointer; font-size: 16px; }
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.header-actions a { color: #ffffff; font-size: 22px; text-decoration: none; position: relative; }
+.badge-count {
+  position: absolute; top: -8px; right: -10px; background: #ffffff; color: #1b6392;
+  font-size: 11px; font-weight: 700; width: 18px; height: 18px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.nav-bar { background-color: #ffffff; border-bottom: 1px solid #e4e7e9; padding: 15px 0; }
+.nav-row { display: flex; justify-content: space-between; align-items: center; }
+.all-categories-btn { background: #f2f4f5; padding: 12px 20px; border-radius: 4px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: #5f6c72; text-decoration: none; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+.nav-links a.active, .nav-links a:hover { color: #fa8232; }
+.nav-phone { font-size: 16px; font-weight: 700; color: #191c1f; display: flex; align-items: center; gap: 8px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #77878f; }
+.breadcrumb a { color: #77878f; text-decoration: none; }
+.breadcrumb .current { color: #2da5f3; }
+
+/* ==========================================
+   ORDER DETAILS ASOSIY QISMI (FIGMA 1:1)
+   ========================================== */
+.order-details-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 60px auto;
+}
+
+.order-details-card {
+  background: #ffffff;
+  border: 1px solid #e4e7e9;
+  border-radius: 4px;
+  padding: 40px;
+  width: 100%;
+  max-width: 950px;
+}
+
+.order-top-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4e7e9;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: #fffaf0; /* Figma dagi och sariq fon rangiga moslab */
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid #ffe1a8;
+}
+
+.order-main-id {
+  font-size: 18px;
+  font-weight: 700;
+  color: #191c1f;
+  margin: 0 0 4px 0;
+}
+
+.order-products-count {
+  font-size: 13px;
+  color: #5f6c72;
+}
+
+.order-total-price-box strong {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2da5f3;
+}
+
+.expected-delivery {
+  font-size: 14px;
+  color: #5f6c72;
+  margin-bottom: 35px;
+}
+.expected-delivery strong {
+  color: #191c1f;
+}
+
+/* PROGRESS TRACKER */
+.order-progress-tracker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.progress-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background-color: #e4e7e9;
+  z-index: 1;
+}
+
+.progress-step.completed:not(:last-child)::after {
+  background-color: #2db67c;
+}
+
+.step-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e4e7e9;
+  color: #77878f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.progress-step.completed .step-icon-circle {
+  background: #2db67c;
+  color: #ffffff;
+}
+
+.progress-step.active .step-icon-circle {
+  background: #fa8232;
+  color: #ffffff;
+}
+
+.step-content h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #191c1f;
+  margin: 0;
+  text-align: center;
+}
+
+/* ORDER ACTIVITY HISTORY */
+.activity-history-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #191c1f;
+  margin-bottom: 20px;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f2f4f5;
+}
+
+.act-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.act-icon-box.success {
+  background: #e1f5ec;
+  color: #2db67c;
+}
+
+.act-icon-box.primary {
+  background: #e8f4fd;
+  color: #2da5f3;
+}
+
+.act-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.act-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #191c1f;
+}
+
+.act-date {
+  font-size: 11px;
+  color: #77878f;
+}
+
+/* ==========================================
+   FOOTER (QORA DIZAYN)
+   ========================================== */
+.site-footer {
+  background-color: #191c1f;
+  color: #ffffff;
+  padding-top: 60px;
+  font-size: 13px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr;
+  gap: 30px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #30363a;
+}
+.footer-logo { font-size: 24px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; color: #fff; }
+.support-info { margin-bottom: 12px; }
+.support-label { display: block; font-size: 11px; color: #77878f; margin-bottom: 2px; }
+.support-phone { font-size: 16px; font-weight: 700; color: #ffffff; text-decoration: none; }
+.footer-address { color: #77878f; line-height: 1.5; margin-bottom: 10px; }
+.footer-email { color: #e4e7e9; text-decoration: none; font-weight: 500; }
+.footer-title { font-size: 14px; font-weight: 700; color: #ffffff; margin-top: 0; margin-bottom: 20px; }
+.footer-links { list-style: none; padding: 0; margin: 0 0 20px 0; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { color: #89949a; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover, .footer-links a.active-cat { color: #ffa500; }
+.browse-all-btn {
+  display: inline-flex; align-items: center; gap: 8px; background: #ffc107; color: #191c1f;
+  padding: 10px 16px; border-radius: 4px; font-weight: 700; font-size: 12px; text-decoration: none;
+}
+.app-store-buttons { display: flex; flex-direction: column; gap: 10px; }
+.app-btn {
+  display: flex; align-items: center; gap: 10px; background: #22262a; border: 1px solid #30363a;
+  padding: 10px 14px; border-radius: 4px; color: #fff; text-decoration: none;
+}
+.app-btn i { font-size: 22px; }
+.app-btn span { display: block; font-size: 9px; color: #77878f; }
+.app-btn strong { font-size: 12px; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-cloud a { background: #22262a; color: #c4cdd2; padding: 6px 10px; border-radius: 2px; font-size: 11px; text-decoration: none; }
+.tag-cloud a.tag-highlight { border: 1px solid #ffc107; color: #ffc107; }
+.footer-bottom-bar { background-color: #111315; padding: 20px 0; text-align: center; color: #77878f; font-size: 12px; margin-top: 40px; }

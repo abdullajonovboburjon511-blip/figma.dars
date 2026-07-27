@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLICON - Shop Grid 1:1</title>
+  
+  <link rel="stylesheet" href="index.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="top-bar">
+      <div class="container flex-between">
+        <p>Welcome to Clicon online eCommerce store.</p>
+        <div class="top-links">
+          <span>Follow us: 
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </span>
+          <span class="divider">|</span>
+          <span>Eng <i class="fa-solid fa-chevron-down"></i></span>
+          <span>USD <i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="middle-bar">
+      <div class="container flex-between">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-circle-dot orange-text"></i> CLICON
+        </a>
+        <div class="search-box">
+          <input type="text" placeholder="Search for anything...">
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="header-icons">
+          <a href="#" class="icon-btn" title="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge" id="like-count">0</span>
+          </a>
+          <a href="#" class="icon-btn cart-icon" title="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge" id="cart-count">0</span>
+          </a>
+          <a href="#" class="icon-btn" title="User"><i class="fa-regular fa-user"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <div class="container flex-between">
+        <div class="nav-left">
+          <button class="all-cat-btn">
+            <i class="fa-solid fa-bars"></i> All Category <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="nav-menu">
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i> Track Order</a></li>
+            <li><a href="#"><i class="fa-solid fa-arrows-rotate"></i> Compare</a></li>
+            <li><a href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i> Need Help</a></li>
+          </ul>
+        </div>
+        <div class="contact-phone">
+          <i class="fa-solid fa-phone-volume"></i> +1-202-555-0104
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a> 
+      <i class="fa-solid fa-chevron-right separator-icon"></i> 
+      <a href="#">Shop</a> 
+      <i class="fa-solid fa-chevron-right separator-icon"></i> 
+      <span>Shop Grid</span> 
+      <i class="fa-solid fa-chevron-right separator-icon"></i> 
+      <span class="active-crumb">Electronics Devices</span>
+    </div>
+  </div>
+
+  <section class="shop-page-section">
+    <div class="container shop-layout">
+      
+      <aside class="shop-sidebar">
+        
+        <h3 class="sidebar-title">CATEGORY</h3>
+        <ul class="category-filter-list">
+          <li><label><input type="radio" name="cat" checked> Electronics Devices</label></li>
+          <li><label><input type="radio" name="cat"> Computer & Laptop</label></li>
+          <li><label><input type="radio" name="cat"> Computer Accessories</label></li>
+          <li><label><input type="radio" name="cat"> SmartPhone</label></li>
+          <li><label><input type="radio" name="cat"> Headphone</label></li>
+          <li><label><input type="radio" name="cat"> Mobile Accessories</label></li>
+          <li><label><input type="radio" name="cat"> Gaming Console</label></li>
+          <li><label><input type="radio" name="cat"> Camera & Photo</label></li>
+          <li><label><input type="radio" name="cat"> TV & Homes Appliances</label></li>
+          <li><label><input type="radio" name="cat"> Watches & Accessories</label></li>
+          <li><label><input type="radio" name="cat"> GPS & Navigation</label></li>
+          <li><label><input type="radio" name="cat"> Wearable Technology</label></li>
+        </ul>
+
+        <div class="price-range-filter">
+          <h3 class="sidebar-title">PRICE RANGE</h3>
+          <input type="range" min="0" max="2000" value="1000" class="slider">
+          <div class="price-inputs">
+            <input type="text" value="Min price">
+            <input type="text" value="Max price">
+          </div>
+        </div>
+
+        <div class="brand-filter">
+          <h3 class="sidebar-title">POPULAR BRAND</h3>
+          <div class="brand-grid">
+            <label><input type="checkbox"> Apple</label>
+            <label><input type="checkbox"> Microsoft</label>
+            <label><input type="checkbox"> Dell</label>
+            <label><input type="checkbox"> HP</label>
+            <label><input type="checkbox"> Samsung</label>
+          </div>
+        </div>
+
+      </aside>
+
+      <main class="shop-content">
+        
+        <div class="shop-top-filter flex-between">
+          <div class="search-inside">
+            <input type="text" placeholder="Search for anything...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="sort-by">
+            <span>Sort by:</span>
+            <select>
+              <option>Most Popular</option>
+              <option>Low to High Price</option>
+              <option>High to Low Price</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="active-filters flex-between">
+          <div class="filter-tags">
+            <span>Active Filters: <b>Electronics Devices</b> <i class="fa-solid fa-xmark"></i></span>
+            <span><b>5 Star Rating</b> <i class="fa-solid fa-xmark"></i></span>
+          </div>
+          <div class="results-count">
+            <b>65,867</b> Results found.
+          </div>
+        </div>
+
+        <div class="products-grid-3">
+          
+          <div class="product-card">
+  <a href="boburX.html" class="product-img-link">
+    <img src="/img.img/993680a4fb804721053db577fe1e84c4758c415b.png" alt="Computer">
+  </a>
+  
+  <div class="product-actions">
+    <button class="action-btn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+    <button class="action-btn cart-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+    
+    <a href="boburX.html" class="action-btn eye-btn"><i class="fa-regular fa-eye"></i></a>
+  </div>
+
+  <div class="product-info">
+    <div class="rating">★★★★★ <span>(738)</span></div>
+    
+    <h4 class="product-title">
+      <a href="boburX.html">canpitur windows 10</a>
+    </h4>
+    
+    <div class="product-price">$600</div>
+  </div>
+</div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=300" alt="Samsung">
+              <div class="product-actions">
+                <button class="action-btn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-btn cart-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="#" class="action-btn eye-btn"><i class="fa-regular fa-eye"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating">★★★★★ <span>(538)</span></div>
+              <h4 class="product-title">Samsung Electronics Samsung Galaxy S21 5G</h4>
+              <div class="product-price">$2,300</div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <span class="badge badge-blue">BEST DEALS</span>
+            <div class="product-img">
+              <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=300" alt="Monitor">
+              <div class="product-actions">
+                <button class="action-btn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-btn cart-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="#" class="action-btn eye-btn"><i class="fa-regular fa-eye"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating">★★★★★ <span>(423)</span></div>
+              <h4 class="product-title">Amazon Basics High-Speed HDMI Cable...</h4>
+              <div class="product-price">$360</div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300" alt="Headphones">
+              <div class="product-actions">
+                <button class="action-btn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-btn cart-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="#" class="action-btn eye-btn"><i class="fa-regular fa-eye"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating">★★★★★ <span>(816)</span></div>
+              <h4 class="product-title">Portable Washing Machine 11lbs capacity</h4>
+              <div class="product-price">$80</div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <span class="badge badge-yellow">20% OFF</span>
+            <div class="product-img">
+              <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300" alt="TV">
+              <div class="product-actions">
+                <button class="action-btn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-btn cart-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="#" class="action-btn eye-btn"><i class="fa-regular fa-eye"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating">★★★★★ <span>(312)</span></div>
+              <h4 class="product-title">Wired Over-Ear Gaming Headphones with USB</h4>
+              <div class="product-price">$1,500</div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <span class="badge badge-green">SALE</span>
+            <div class="product-img">
+              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300" alt="Camera">
+              <div class="product-actions">
+                <button class="action-btn like-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-btn cart-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="#" class="action-btn eye-btn"><i class="fa-regular fa-eye"></i></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="rating">★★★★★ <span>(540)</span></div>
+              <h4 class="product-title">Polaroid 32-Inch 720p LED TV HD Ready</h4>
+              <div class="product-price">$900</div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+  </section>
+<div class="shop-grid-container">
+          
+          <div class="left-sidebar-banner-area">
+            
+            <div class="popular-tags-box">
+              <h3 class="sidebar-title">POPULAR TAG</h3>
+              <div class="tags-cloud">
+                <span class="tag">Game</span>
+                <span class="tag">iPhone</span>
+                <span class="tag">TV</span>
+                <span class="tag active">Asus Laptops</span>
+                <span class="tag">Macbook</span>
+                <span class="tag">SSD</span>
+                <span class="tag">Graphics Card</span>
+                <span class="tag">Power Bank</span>
+                <span class="tag">Smart TV</span>
+                <span class="tag">Speaker</span>
+                <span class="tag">Tablet</span>
+                <span class="tag">Microwave</span>
+                <span class="tag">Samsung</span>
+              </div>
+            </div>
+
+            <div class="promo-banner-card">
+              <div class="promo-content">
+                <span class="promo-category">WATCH</span>
+                <h3 class="promo-title">Heavy on Features. Light on Price.</h3>
+                <p class="promo-desc">Smart watch Series</p>
+                <div class="promo-price-box">
+                  <span>Only for:</span> <strong>$299 USD</strong>
+                </div>
+                <button class="promo-btn"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                <a href="#" class="promo-link">VIEW DETAILS <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+              <div class="promo-img">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Apple Watch">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="products-grid-3">
+            
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=300" alt="Camera">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(340)</span></div>
+                <h4 class="product-title">Samsung Electronics Samsung Galaxy S21 5G</h4>
+                <div class="product-price">$2,300</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=300" alt="Webcam">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(558)</span></div>
+                <h4 class="product-title">4K UHD LED Smart TV with Chromecast Built-in</h4>
+                <div class="product-price">$220</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300" alt="Printer">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(536)</span></div>
+                <h4 class="product-title">Wired Over-Ear Gaming Headphones with USB</h4>
+                <div class="product-price">$1,500</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300" alt="Washing machine">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(423)</span></div>
+                <h4 class="product-title">Polaroid 57-Inch Photo/Video Tripod with Deluxe Tripod Case</h4>
+                <div class="product-price"><span class="old-price">$1,600</span> $1,200</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <span class="badge badge-hot">HOT</span>
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300" alt="Monitor">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(738)</span></div>
+                <h4 class="product-title">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</h4>
+                <div class="product-price"><span class="old-price">$75</span> $70</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=300" alt="Phone">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(538)</span></div>
+                <h4 class="product-title">Samsung Electronics Samsung Galaxy S21 5G</h4>
+                <div class="product-price">$2,300</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <span class="badge badge-deals">BEST DEALS</span>
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=300" alt="Ac">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(423)</span></div>
+                <h4 class="product-title">Amazon Basics High-Speed HDMI Cable (18 Gbps, 4K/6...</h4>
+                <div class="product-price">$360</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300" alt="Headphone">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(816)</span></div>
+                <h4 class="product-title">Portable Wshing Machine, 11lbs capacity Model 18NMWF...</h4>
+                <div class="product-price">$80</div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <span class="badge badge-deals">BEST DEALS</span>
+              <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300" alt="Phone">
+                <div class="product-actions">
+                  <button class="action-btn" onclick="toggleLike(this)"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" onclick="addToCart()"><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a href="#" class="action-btn"><i class="fa-regular fa-eye"></i></a>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="rating">★★★★★ <span>(994)</span></div>
+                <h4 class="product-title">Amazon Basics High-Speed HDMI Cable (18 Gbps, 4K/6...</h4>
+                <div class="product-price">$360</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="pagination">
+          <button class="page-btn"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn">5</button>
+          <button class="page-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <footer class="main-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col footer-brand-col">
+        <a href="index.html" class="footer-logo">
+          <i class="fa-solid fa-circle-dot orange-text"></i> CLICON
+        </a>
+        <p class="footer-support-text">Customer Support:</p>
+        <p class="footer-phone">(202) 555-0129</p>
+        <p class="footer-address">4517 Washington Ave. Manchester, Kentucky 39495</p>
+        <p class="footer-email">info@clicon.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">TOP CATEGORY</h4>
+        <ul class="footer-links">
+          <li><a href="#">Computer & Laptop</a></li>
+          <li><a href="#">Smart Phone</a></li>
+          <li><a href="#">Headphone</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Camera & Photo</a></li>
+          <li><a href="#">TV & Homes</a></li>
+          <li><a href="#" class="orange-link">Browse All Product <i class="fa-solid fa-arrow-right"></i></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">QUICK LINKS</h4>
+        <ul class="footer-links">
+          <li><a href="#">Shop Product</a></li>
+          <li><a href="#">Shopping Cart</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Compare</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Customer Help</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">DOWNLOAD APP</h4>
+        <div class="app-buttons">
+          <a href="#" class="app-btn">
+            <i class="fa-brands fa-google-play"></i>
+            <div>
+              <span>Get it now</span>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+          <a href="#" class="app-btn">
+            <i class="fa-brands fa-apple"></i>
+            <div>
+              <span>Get it now</span>
+              <strong>App Store</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">POPULAR TAG</h4>
+        <div class="footer-tags">
+          <a href="#">Game</a>
+          <a href="#">iPhone</a>
+          <a href="#">TV</a>
+          <a href="#">Asus Laptops</a>
+          <a href="#">Macbook</a>
+          <a href="#">SSD</a>
+          <a href="#" class="active-tag">Graphics Card</a>
+          <a href="#">Power Bank</a>
+          <a href="#">Smart TV</a>
+          <a href="#">Speaker</a>
+          <a href="#">Tablet</a>
+          <a href="#">Microwave</a>
+          <a href="#">Samsung</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>Ecommerce Template © 2021. Designed by Wandering Template</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js.js"></script>
+</body>
+</html>

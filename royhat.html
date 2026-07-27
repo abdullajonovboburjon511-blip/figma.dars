@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order - Clicon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="royhat.css">
+</head>
+<body>
+
+  <div class="top-header">
+    <div class="container top-header-row">
+      <p>Welcome to Clicon online eCommerce store.</p>
+      <div class="top-header-right">
+        <span>Follow us:</span>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa-brands fa-reddit-alien"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <span class="divider">|</span>
+        <select class="lang-select"><option>Eng</option></select>
+        <select class="lang-select"><option>USD</option></select>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container main-header-row">
+      <div class="logo">
+        <i class="fa-solid fa-circle" style="color: #fa8232;"></i> <strong>CLICON</strong>
+      </div>
+      <div class="search-bar-box">
+        <input type="text" placeholder="Search for anything...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="header-actions">
+        <a href="boburX.html"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">2</span></a>
+        <a href="#"><i class="fa-regular fa-heart"></i></a>
+        <a href="boburX.html"><i class="fa-regular fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="container nav-row">
+      <div class="all-categories-btn">
+        <i class="fa-solid fa-bars"></i> All Category <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="nav-links">
+        <a href="royhat.html" class="active"><i class="fa-solid fa-location-dot"></i> Track Order</a>
+        <a href="#">Compare</a>
+        <a href="#">Customer Support</a>
+        <a href="#">Need Help</a>
+      </div>
+      <div class="nav-phone">
+        <i class="fa-solid fa-phone-volume"></i> +1-202-555-0104
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumb" style="margin: 20px 0;">
+      <a href="boburX.html">Home</a> <i class="fa-solid fa-chevron-right"></i>
+      <a href="#">Pages</a> <i class="fa-solid fa-chevron-right"></i>
+      <span class="current">Track Order</span>
+    </div>
+  </div>
+
+  <div class="container track-order-container">
+    <div class="track-order-card">
+      <h2 class="track-title">Track Order</h2>
+      <p class="track-desc">
+        To track your order please enter your Order ID in the input field below and press the "Track Order" button, this was given to you on your receipt and in the confirmation email you should have received.
+      </p>
+
+      <form onsubmit="handleTrackOrder(event)">
+        <div class="track-form-grid">
+          <div class="form-group">
+            <label>Order ID</label>
+            <input type="text" id="orderIdInput" placeholder="ID..." required>
+            <span class="form-hint">Order ID that we sended to your email address.</span>
+          </div>
+          <div class="form-group">
+            <label>Billing Email</label>
+            <input type="email" id="emailInput" placeholder="Email address" required>
+          </div>
+        </div>
+<a href="sayit.html" class="track-submit-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+  TRACK ORDER <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <i class="fa-solid fa-circle" style="color: #fa8232;"></i> <strong>CLICON</strong>
+        </div>
+        <div class="support-info">
+          <span class="support-label">Customer Supports:</span>
+          <a href="tel:6295550129" class="support-phone">(629) 555-0129</a>
+        </div>
+        <p class="footer-address">4517 Washington Ave. Manchester, Kentucky 39495</p>
+        <a href="mailto:info@kinbo.com" class="footer-email">info@kinbo.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">TOP CATEGORY</h4>
+        <ul class="footer-links">
+          <li><a href="sayit.html">zakas qilsh</a></li>
+          <li><a href="#">SmartPhone</a></li>
+          <li><a href="#">Headphone</a></li>
+          <li><a href="#" class="active-cat">Accessories</a></li>
+          <li><a href="#">Camera & Photo</a></li>
+          <li><a href="#">TV & Homes</a></li>
+        </ul>
+        <a href="boburX.html" class="browse-all-btn">Browse All Product <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">QUICK LINKS</h4>
+        <ul class="footer-links">
+          <li><a href="#">Shop Product</a></li>
+          <li><a href="#">Shoping Cart</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Compare</a></li>
+          <li><a href="royhat.html">Track Order</a></li>
+          <li><a href="#">Customer Help</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">DOWNLOAD APP</h4>
+        <div class="app-store-buttons">
+          <a href="#" class="app-btn"><i class="fa-brands fa-google-play"></i><div><span>Get it now</span><strong>Google Play</strong></div></a>
+          <a href="#" class="app-btn"><i class="fa-brands fa-app-store"></i><div><span>Get it now</span><strong>App Store</strong></div></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">POPULAR TAG</h4>
+        <div class="tag-cloud">
+          <a href="#">Game</a><a href="#">iPhone</a><a href="#">TV</a><a href="#">Asus Laptops</a>
+          <a href="#">Macbook</a><a href="#">SSD</a><a href="#" class="tag-highlight">Graphics Card</a>
+          <a href="#">Power Bank</a><a href="#">Smart TV</a><a href="#">Speaker</a>
+          <a href="#">Tablet</a><a href="#">Microwave</a><a href="#">Samsung</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <p>Kinbo-eCommerce Template © 2021. Design by Templatecookie</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleTrackOrder(event) {
+      event.preventDefault();
+      let orderId = document.getElementById('orderIdInput').value;
+      let email = document.getElementById('emailInput').value;
+      if(orderId && email) {
+        // Tugma bosilganda sayit.html sahifasini ochadi
+        window.open('sayit.html?order=' + encodeURIComponent(orderId), '_blank');
+      }
+    }
+  </script>
+</body>
+</html>
